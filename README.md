@@ -12,13 +12,8 @@ nmap -sV 192.168.1.110  (Target 1)
 nmap -sV 192.168.1.115  (Target 2)
 
 This scan identifies the services below as potential points of entry:
-Target 1 (exposed services) and Target 2 (exposed services)
-
-*22 - ssh*
-80 - http
-111 - rpcbind
-139 - netbios-ssn Samba smbd
-445 - netbios-ssn Samba smbd
+- Target 1 & 2 (exposed services)
+ports 22,80,111,139 and 445 are open.
 
 The following vulnerabilities were identified on target 1;
 
