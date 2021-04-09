@@ -119,15 +119,19 @@ Traffic to these services should be carefully monitored. To this end, we have im
 
 
 ## Suggestions for Going Further
+
 The logs and alerts generated during the assessment suggest that this network is susceptible to several active threats, identified by the alerts above. In addition to watching for occurrences of such threats, the network should be hardened against them. The Blue Team suggests that IT implement the fixes below to protect the network:
+
 ● Vulnerability 1: Port 111 (Portmapper) rpcbind
 Patch: install special-security-package with apt-get
 Why It Works: special-security-package scans the system for viruses every day
 Other suggestions: add IPTables to deny TCP connection of unwanted IP ranges
+
 ● Vulnerability 2: Port 139 (NetBIOS) NBSTAT
 Patch: chmod 600 /var/www/html/wordpress/wp-config.php
 Why It Works: By changing the permissions on the config file, only the owner would have full access while all other privileges would be denied to all outside users.
 Other suggestions: Disable file and printer sharing, block ports 135-139 completely, use complex passwords
+
 ● Vulnerability 3: Port 445 (SMB)
 Patch: restrict access to TCP port 445 (SMB)
 Why it Works: Prevents file and printer sharing from unauthorized users
