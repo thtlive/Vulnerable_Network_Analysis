@@ -96,21 +96,21 @@ Both targets are Apache web servers and have ssh enabled. So, ports 80 and 22 ar
 # Monitoring the Targets
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
 
-- Name of Alert 1: Excessive http errors
+**Name of Alert 1**: Excessive http errors
 **Metric**: metricbeat
 **Threshold**: 400/5mins
 **Vulnerability Mitigated**: brute-force attack
 **Reliability**: Does this alert generate lots of false positives/false negatives? No 
 **Rate**: High if threshold is set right.
 
-- Name of Alert 2: http request size monitor 
+**Name of Alert 2**: http request size monitor 
 **Metric**: metricbeat
 **Threshold**: 400/5mins
 **Vulnerability Mitigated**: DDoS
 **Reliability**: Does this alert generate lots of false positives/false negatives? 
 **Rate**: High
 
-- Name of Alert 3: cpu usage monitor
+**Name of Alert 3**: cpu usage monitor
 **Metric**: metricbeat
 **Threshold**:max system.process.cpu.total.pct above 0.5 in last 5mins
 **Vulnerability Mitigated**: unauthorized ssh access and root escalation
